@@ -1,0 +1,3 @@
+.user
+  %h2= link_to user.name, user
+  = render user.locations.last.presence if user.locations.last

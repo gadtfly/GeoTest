@@ -1,0 +1,8 @@
+.status
+  = render status.user
+  %p= status.content
+  = render status.location
+  %time= link_to status.created_at, status
+  - if current_user == status.user
+    = link_to "Edit", [:edit, status]
+    = link_to "Delete", status, method: :delete
